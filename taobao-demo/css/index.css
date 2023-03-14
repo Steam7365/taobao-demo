@@ -1,0 +1,96 @@
+body {
+    font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+}
+
+#cart {
+    color: orange;
+}
+
+
+/*网页头*/
+#header {
+    margin-bottom: 20px;
+}
+
+#header img {
+    width: 142px;
+}
+
+#search {
+    padding-top: 10px;
+}
+
+#qr {
+    width: 90px;
+    height: 92px;
+    margin:0 ;
+    padding:5px ;
+    text-align: center;
+    background-color: #FFF;
+}
+
+#qr h3{
+    font-size: 12px;
+    color: orange;
+    text-align: center;
+
+    margin:0 ;
+    padding:0 ;
+}
+
+#qr img{
+    width: 62px;
+    height: 62px;
+    margin-top: 5px;
+}
+
+/*图片轮播*/
+
+
+#carousel-example-generic img {
+    width: 100%;
+}
+
+#carousel-example-generic li {
+    background-color: #FFF;
+}
+
+#carousel-example-generic .active {
+    background-color: red;
+}
+
+
+
+
+/*选项卡*/
+#xuanxiangka {
+    margin-top: 20px;
+}
+
+.thumbnail {
+    margin-top: 10px;
+    padding: 10px 10px 30px 10px;
+}
+
+.thumbnail h3 {
+    font-size: 14px;
+    color: #666;
+    font-weight: normal;
+    transition: color 0.3s;
+}
+
+.thumbnail el {
+    color:orange;
+    font-size: 6px;
+}
+
+.thumbnail .price {
+    color:red;
+    font-size: 20px;
+}
+
+
+#footer {
+    padding-bottom: 50px;
+}
+

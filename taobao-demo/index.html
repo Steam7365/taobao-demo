@@ -1,0 +1,995 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>淘宝网 - 淘！我喜欢</title>
+
+    <link href="images/icon.png" rel="shortcut icon" type="images/x-icon">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bs3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- 导航开始 -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">山寨淘宝商城</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <!-- 左边导航 -->
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#register" data-backdrop="static">免费注册</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu" id="menu-item">
+                            <li><a href="#remai">热卖商品</a></li>
+                            <li><a href="#miaosha">淘宝秒杀</a></li>
+                            <li><a href="#youping">优品专辑</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#faxian">发现好货</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+
+                <!-- 右边导航：navbar-right -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span id="cart" class="glyphicon glyphicon-shopping-cart"></span>&nbsp;购物车</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <!-- 导航结束 -->
+
+
+
+
+    <!-- 网页头开始 -->
+    <div class="container" id="header">
+        <div class="row">
+            <!-- LOGO -->
+            <div class="col-md-2">
+                <img src="images/logo.png" alt="">
+            </div>
+
+
+            <!-- 搜索 -->
+            <div class="col-md-8" id="search">
+                <form action="#" method="post">
+                    <div class="input-group">
+
+                        <span class="input-group-addon" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">
+                            宝贝
+                            <span class="caret"></span>
+                        </span>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">天猫</a></li>
+                            <li><a href="#">店铺</a></li>
+                        </ul>
+
+                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <span class="input-group-addon">搜索</span>
+                    </div>
+                </form>
+            </div>
+
+
+            <!-- 二维码 -->
+            <div class="col-md-2">
+                <div class="alert alert-warning" id="qr" role="alert">
+                    <h3>手机淘宝</h3>
+                    <img src="images/qr.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 网页头结束 -->
+
+    <!-- 图片轮播开始 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- 小圆点 -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                    </ol>
+
+                    <!-- 轮播图片区 -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="images/1.jpg" alt="...">
+                            <div class="carousel-caption">
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="images/2.jpg" alt="...">
+                            <div class="carousel-caption">
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="images/3.jpg" alt="...">
+                            <div class="carousel-caption">
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="images/4.jpg" alt="...">
+                            <div class="carousel-caption">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 向左、向右控制 -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 图片轮播结束 -->
+
+
+    <!-- 选项卡开始 -->
+    <div class="container" id="xuanxiangka">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#remai" aria-controls="remai" role="tab"
+                    data-toggle="tab">热卖商品</a></li>
+            <li role="presentation"><a href="#miaosha" aria-controls="miaosha" role="tab" data-toggle="tab">淘宝秒杀</a>
+            </li>
+            <li role="presentation"><a href="#youping" aria-controls="youping" role="tab" data-toggle="tab">优品专辑</a>
+            </li>
+            <li role="presentation"><a href="#faxian" aria-controls="faxian" role="tab" data-toggle="tab">发现好货</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="remai">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="images/one.png" alt="...">
+                            <div class="caption">
+                                <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                <p>
+                                    <span class="price pull-left">
+                                        <el>￥</el>
+                                        300
+                                    </span>
+
+                                    <span class="sales pull-right">销量：1000</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="images/one.png" alt="...">
+                            <div class="caption">
+                                <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                <p>
+                                    <span class="price pull-left">
+                                        <el>￥</el>
+                                        300
+                                    </span>
+
+                                    <span class="sales pull-right">销量：1000</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="images/one.png" alt="...">
+                            <div class="caption">
+                                <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                <p>
+                                    <span class="price pull-left">
+                                        <el>￥</el>
+                                        300
+                                    </span>
+
+                                    <span class="sales pull-right">销量：1000</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="images/one.png" alt="...">
+                            <div class="caption">
+                                <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                <p>
+                                    <span class="price pull-left">
+                                        <el>￥</el>
+                                        300
+                                    </span>
+
+                                    <span class="sales pull-right">销量：1000</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div role="tabpanel" class="tab-pane" id="miaosha">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="images/two.png" alt="...">
+                            <div class="caption">
+                                <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                <p>
+                                    <span class="price pull-left">
+                                        <el>￥</el>
+                                        300
+                                    </span>
+
+                                    <span class="sales pull-right">销量：1000</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="images/two.png" alt="...">
+                            <div class="caption">
+                                <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                <p>
+                                    <span class="price pull-left">
+                                        <el>￥</el>
+                                        300
+                                    </span>
+
+                                    <span class="sales pull-right">销量：1000</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="images/two.png" alt="...">
+                            <div class="caption">
+                                <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                <p>
+                                    <span class="price pull-left">
+                                        <el>￥</el>
+                                        300
+                                    </span>
+
+                                    <span class="sales pull-right">销量：1000</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="images/two.png" alt="...">
+                            <div class="caption">
+                                <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                <p>
+                                    <span class="price pull-left">
+                                        <el>￥</el>
+                                        300
+                                    </span>
+
+                                    <span class="sales pull-right">销量：1000</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div role="tabpanel" class="tab-pane" id="youping">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="images/three.png" alt="...">
+                            <div class="caption">
+                                <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                <p>
+                                    <span class="price pull-left">
+                                        <el>￥</el>
+                                        300
+                                    </span>
+
+                                    <span class="sales pull-right">销量：1000</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="images/three.png" alt="...">
+                            <div class="caption">
+                                <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                <p>
+                                    <span class="price pull-left">
+                                        <el>￥</el>
+                                        300
+                                    </span>
+
+                                    <span class="sales pull-right">销量：1000</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="images/three.png" alt="...">
+                            <div class="caption">
+                                <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                <p>
+                                    <span class="price pull-left">
+                                        <el>￥</el>
+                                        300
+                                    </span>
+
+                                    <span class="sales pull-right">销量：1000</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="images/three.png" alt="...">
+                            <div class="caption">
+                                <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                <p>
+                                    <span class="price pull-left">
+                                        <el>￥</el>
+                                        300
+                                    </span>
+
+                                    <span class="sales pull-right">销量：1000</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div role="tabpanel" class="tab-pane" id="faxian">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="images/four.png" alt="...">
+                            <div class="caption">
+                                <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                <p>
+                                    <span class="price pull-left">
+                                        <el>￥</el>
+                                        300
+                                    </span>
+
+                                    <span class="sales pull-right">销量：1000</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="images/four.png" alt="...">
+                            <div class="caption">
+                                <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                <p>
+                                    <span class="price pull-left">
+                                        <el>￥</el>
+                                        300
+                                    </span>
+
+                                    <span class="sales pull-right">销量：1000</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="images/four.png" alt="...">
+                            <div class="caption">
+                                <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                <p>
+                                    <span class="price pull-left">
+                                        <el>￥</el>
+                                        300
+                                    </span>
+
+                                    <span class="sales pull-right">销量：1000</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="images/four.png" alt="...">
+                            <div class="caption">
+                                <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                <p>
+                                    <span class="price pull-left">
+                                        <el>￥</el>
+                                        300
+                                    </span>
+
+                                    <span class="sales pull-right">销量：1000</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 选项卡结束 -->
+
+    <!-- 所有商品开始 -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">所有商品</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/four.png" alt="...">
+                                    <div class="caption">
+                                        <h3>海宁真皮皮衣女中长款斗篷绵羊皮风衣外套</h3>
+                                        <p>
+                                            <span class="price pull-left">
+                                                <el>￥</el>
+                                                300
+                                            </span>
+
+                                            <span class="sales pull-right">销量：1000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 所有商品结束 -->
+
+    <!-- 网页脚开始 -->
+    <div class="container" id="footer">
+        <div class="row">
+            <div class="col-md-12">
+                <hr />
+                <p align="center">版权所有© 2003-现在 Taobao.com 版权所有</p>
+                <p align="center"><a href="#">增值电信业务经营许可证：浙B2-20080224</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 网页脚结束 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="register">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <p>One fine body&hellip;</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+
+
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="js/jquery-1.12.4.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="bs3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
